@@ -1,38 +1,115 @@
 .App {
   text-align: center;
+  background-color: #470707;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.salsa-regular {
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.edit-area {
+  width: 140px;
+ height: 100px;
+  margin: 2px;
+  background-color:darksalmon ;
+  border-radius: 15px;
+}
+.edit-area:hover{
+  background-color: azure;
+}
+.note-text{
+  text-align: center;
+  word-wrap: break-word;
+
+}
+ 
+.text-w{
+  color: rgb(9, 95, 139);
+  
+}
+ 
+.heading {
+  margin: 0px;
+  padding: 4px;
+  text-align: center;
+  height: 50px;
+  text-shadow: #ed0e0e;
+  text-decoration: solid;
+  text-align: center;
+  background-image: linear-gradient(to top ,chocolate,#e2ec2f,chocolate);
+}
+.btn-st {
+  font-family: "Salsa", cursive;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 30px;
+  box-shadow: #470707;
+
+}
+.btn-st:hover{
+  background-color: rgb(226, 145, 39);
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+  position: relative;
+  width: 100vw;
+  min-height: 70vh;
+  border: 3px solid #a72424;
+  overflow: hidden;
+  background-color: chocolate;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note {
+  width: 150px;
+  min-height: 150px;
+  position: absolute;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #bb1616;
+  border-radius: 20px;
+  background-color: #e2ec2f;
+  cursor: move;
+  transition-timing-function: ease-in-out;
+  transition: none;
+}
+
+.note.editing {
+  border: 1px solid #00f;
+}
+.dragging {
+  background-color: burlywood;
+  opacity: .8;
+  box-shadow: 10px 10px #a72424;
+
+}
+
+.note.pinned {
+  background-color: crimson;
+  color: rgb(239, 197, 9);
+  cursor: pointer;
+}
+
+.controls {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  bottom: 10px;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 2px auto;
+  padding: 2px 2px;
+  
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-button:hover {
+  scale: 1.1;
 }
+
